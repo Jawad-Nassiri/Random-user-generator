@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+     <div class="container">
+        <h1>Random User Generator</h1>
+        <button class="generate-btn" id="generateBtn">Generate New User</button>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            Loading new user...
+        </div>
+
+        <div class="user-card hidden" id="userCard">
+            <img class="user-avatar" id="userAvatar" src="" alt="User Avatar">
+            
+            
+            <div class="user-info">
+                <div class="info-item">
+                    <div class="info-label">Full Name</div>
+                    <div class="info-value" id="userName"></div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-label">Email Address</div>
+                    <div class="info-value" id="userEmail"></div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-label">Password</div>
+                    <div class="info-value" id="userPassword"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
