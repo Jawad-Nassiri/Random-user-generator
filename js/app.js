@@ -17,16 +17,18 @@ generateBtn.addEventListener('click', () => {
             userCard.classList.remove('hidden');
             userCard.classList.add('show');
 
-
-            let userEmail = data.results[0].email;
-            let userGenderTitle = data.results[0].name.title;
-            let userFirstName = data.results[0].name.first;
-            let userLastName = data.results[0].name.last;
-            let userPhotoPath = data.results[0].picture.large;
-            let userPassword = data.results[0].login.password;
+            const { email, login: { password: userPassword }, name: { title: userGenderTitle, first: userFirstName, last: userLastName }, picture: { large: userPhotoPath } } = data.results[0];
+            
+            //! second method
+            // let userEmail = data.results[0].email;
+            // let userGenderTitle = data.results[0].name.title;
+            // let userFirstName = data.results[0].name.first;
+            // let userLastName = data.results[0].name.last;
+            // let userPhotoPath = data.results[0].picture.large;
+            // let userPassword = data.results[0].login.password;
 
             userPhotoElem.src = userPhotoPath;
-            userEmailElem.textContent = userEmail;
+            userEmailElem.textContent = email;
             usernameElem.textContent = `${userGenderTitle} ${userFirstName} ${userLastName}`;
             userPasswordElem.textContent = userPassword;
 
